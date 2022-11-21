@@ -80,6 +80,7 @@ description varchar(255)
 create table Bill (
 BillID int primary key,
 SellerName varchar(255),
+BillAddress varchar(255),
 BillDate varchar(255),
 toAMT int
 );
@@ -92,7 +93,7 @@ InNote varchar(255),
 InUser varchar(255),
 );
 --drop table Manager
-drop table Income 
-select * from Income
+drop table Bill 
+select * from bill
 delete from Bill where BillID = 1
 insert into Owner values(1, 'O01', 'Thach', 'admin', 'admin123', 'baothach722002@gmail.com', 'HCM', 0901196142, 0)
