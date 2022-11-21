@@ -49,7 +49,6 @@ C:\Study\Stored\CNPM\CosmeticStore\CosmeticStore\CosmeticStore\obj\Debug\Cosmeti
 C:\Study\Stored\CNPM\CosmeticStore\CosmeticStore\CosmeticStore\obj\Debug\CosmeticStore.CaterogyForm.resources
 C:\Study\Stored\CNPM\CosmeticStore\CosmeticStore\CosmeticStore\obj\Debug\CosmeticStore.StaffForm.resources
 C:\Study\Stored\CNPM\CosmeticStore\CosmeticStore\CosmeticStore\obj\Debug\CosmeticStore.ManagerForm.resources
-C:\Study\Stored\CNPM\CosmeticStore\CosmeticStore\CosmeticStore\obj\Debug\CosmeticStore.DeliveryStaff.resources
 C:\Study\Stored\CNPM\CosmeticStore\CosmeticStore\CosmeticStore\obj\Debug\CosmeticStore.ChangePassword.resources
 C:\Study\Stored\CNPM\CosmeticStore\CosmeticStore\CosmeticStore\obj\Debug\CosmeticStore.SellingForm.resources
 C:\Study\Stored\CNPM\CosmeticStore\CosmeticStore\CosmeticStore\obj\Debug\CosmeticStore.Revenue.resources
