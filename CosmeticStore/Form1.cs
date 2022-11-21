@@ -35,6 +35,7 @@ namespace CosmeticStore
                         {
                             if (ownerAuthenication())
                             {
+                                staffName = uNameTb.Text;
                                 ProductForm product = new ProductForm();
                                 product.Show();
                                 this.Hide();
@@ -45,8 +46,12 @@ namespace CosmeticStore
                         {
                             if(managerAuthenication())
                             {
-                                MessageBox.Show("Enter manager section");
+                                staffName = uNameTb.Text;
+                                Revenue revenue = new Revenue();
+                                revenue.Show();
+                                this.Hide();
                             }
+                            else MessageBox.Show("Wrong username or password");
                         }
                         else if(roleCb.SelectedIndex == 2)
                         {

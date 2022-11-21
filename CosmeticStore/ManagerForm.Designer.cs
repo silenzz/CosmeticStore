@@ -62,6 +62,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.managerGrid)).BeginInit();
             this.SuspendLayout();
@@ -494,9 +496,9 @@
             this.label2.ForeColor = System.Drawing.Color.Azure;
             this.label2.Location = new System.Drawing.Point(5, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 27);
+            this.label2.Size = new System.Drawing.Size(150, 27);
             this.label2.TabIndex = 5;
-            this.label2.Text = "DELID";
+            this.label2.Text = "MANAGERID";
             // 
             // label1
             // 
@@ -592,11 +594,41 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button10
+            // 
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button10.ForeColor = System.Drawing.Color.SteelBlue;
+            this.button10.Location = new System.Drawing.Point(3, 362);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(124, 38);
+            this.button10.TabIndex = 49;
+            this.button10.Text = "Report";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button11.ForeColor = System.Drawing.Color.SteelBlue;
+            this.button11.Location = new System.Drawing.Point(12, 406);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(106, 58);
+            this.button11.TabIndex = 59;
+            this.button11.Text = "View income";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 665);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
@@ -649,5 +681,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }
