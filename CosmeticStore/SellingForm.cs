@@ -85,7 +85,7 @@ namespace CosmeticStore
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if(sellID.Text == "")
+            if(sellID.Text == "" || cusTB.Text == "")
             {
                 MessageBox.Show("Please enter the bill identity");
             }
@@ -94,7 +94,7 @@ namespace CosmeticStore
                 try
                 {
                     conn.Open();
-                    string query = "insert into Bill values(" + sellID.Text + ",'" + staffName.Text + "','" + date.Text + "'," + amount.Text + ")";
+                    string query = "insert into Bill values(" + sellID.Text + ",'" + staffName.Text + "','" + cusTB.Text + "','" + date.Text + "'," + amount.Text + ")";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Bill added");
@@ -133,18 +133,19 @@ namespace CosmeticStore
         {
             sellID.Text = billDG.SelectedRows[0].Cells[0].Value.ToString();
         }
-        int sId, sPrice, sQuantity, sTotal, position = 160;
+        int sId, sPrice, sQuantity, sTotal, position = 190;
         string sName;
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawString("Cosmetic store receipt", new Font("Century Gothic", 36, FontStyle.Bold), Brushes.SteelBlue, new Point(150));
             e.Graphics.DrawString("Bill ID: " + billDG.SelectedRows[0].Cells[0].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Regular), Brushes.SteelBlue, new Point(100, 70));
             e.Graphics.DrawString("Staff name: " + billDG.SelectedRows[0].Cells[1].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Regular), Brushes.SteelBlue, new Point(100, 100));
-            e.Graphics.DrawString("ID", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(100, 130));
-            e.Graphics.DrawString("Name", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(150, 130));
-            e.Graphics.DrawString("Price", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(400, 130));
-            e.Graphics.DrawString("Quantity", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(550, 130));
-            e.Graphics.DrawString("Total", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(700, 130));
+            e.Graphics.DrawString("" + billDG.SelectedRows[0].Cells[2].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Regular), Brushes.SteelBlue, new Point(100, 130));
+            e.Graphics.DrawString("ID", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(100, 160));
+            e.Graphics.DrawString("Name", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(150, 160));
+            e.Graphics.DrawString("Price", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(400, 160));
+            e.Graphics.DrawString("Quantity", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(550, 160));
+            e.Graphics.DrawString("Total", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.SteelBlue, new Point(700, 160));
             foreach (DataGridViewRow row in orderDG.Rows)
             {
                 sId = Convert.ToInt32(row.Cells[0].Value);
@@ -159,9 +160,9 @@ namespace CosmeticStore
                 e.Graphics.DrawString("" + sTotal, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Black, new Point(700, position));
                 position += 30;
             }
-            e.Graphics.DrawString("Total pay: " + billDG.SelectedRows[0].Cells[3].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Regular), Brushes.SteelBlue, new Point(100, 280));
+            e.Graphics.DrawString("Total pay: " + billDG.SelectedRows[0].Cells[4].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Regular), Brushes.SteelBlue, new Point(100, 280));
             e.Graphics.DrawString("Payment_method: Credit_card/Cash", new Font("Century Gothic", 20, FontStyle.Regular), Brushes.SteelBlue, new Point(100, 310));
-            e.Graphics.DrawString("Date: " + billDG.SelectedRows[0].Cells[2].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Regular), Brushes.SteelBlue, new Point(100, 340));
+            e.Graphics.DrawString("Date: " + billDG.SelectedRows[0].Cells[3].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Regular), Brushes.SteelBlue, new Point(100, 340));
             e.Graphics.DrawString("*********CosmeticQueen*********", new Font("Century Gothic", 25, FontStyle.Italic), Brushes.SteelBlue, new Point(150, 370));
             e.Graphics.DrawString("Thanks for using our services", new Font("Century Gothic", 25, FontStyle.Italic), Brushes.SteelBlue, new Point(200, 400));
             orderDG.Rows.Clear();

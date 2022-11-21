@@ -205,13 +205,6 @@ namespace CosmeticStore
             manager.Show();
             this.Hide();
         }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            DeliveryStaff delivery = new DeliveryStaff();
-            delivery.Show();
-            this.Hide();
-        }
         private void typeCb2_SelectionChangeCommitted(object sender, EventArgs e)
         {
             conn.Open();

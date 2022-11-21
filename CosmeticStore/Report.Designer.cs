@@ -50,7 +50,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -296,20 +295,6 @@
             this.label11.Text = "LOG OUT";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // button10
-            // 
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.button10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button10.Location = new System.Drawing.Point(38, 313);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(124, 38);
-            this.button10.TabIndex = 47;
-            this.button10.Text = "Delivery";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // button4
             // 
             this.button4.FlatAppearance.BorderSize = 0;
@@ -372,7 +357,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button5.Location = new System.Drawing.Point(38, 357);
+            this.button5.Location = new System.Drawing.Point(38, 307);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(124, 38);
             this.button5.TabIndex = 48;
@@ -399,7 +384,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button7.Location = new System.Drawing.Point(8, 401);
+            this.button7.Location = new System.Drawing.Point(8, 351);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(195, 38);
             this.button7.TabIndex = 49;
@@ -415,7 +400,6 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button10);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -444,7 +428,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

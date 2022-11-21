@@ -52,14 +52,6 @@ namespace CosmeticStore
             form.Show();
             this.Hide();
         }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            DeliveryStaff staff = new DeliveryStaff();
-            staff.Show();
-            this.Hide();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             Application.Exit();

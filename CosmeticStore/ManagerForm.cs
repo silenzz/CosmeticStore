@@ -175,14 +175,6 @@ namespace CosmeticStore
         {
             populate();
         }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            DeliveryStaff delivery = new DeliveryStaff();
-            delivery.Show();
-            this.Hide();
-        }
-
         private void label12_Click(object sender, EventArgs e)
         {
             this.Hide();

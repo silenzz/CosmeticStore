@@ -43,13 +43,6 @@ namespace CosmeticStore
             form.Show();
             this.Hide();
         }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            DeliveryStaff deliveryStaff = new DeliveryStaff();
-            deliveryStaff.Show();
-            this.Hide();
-        }
         private void Revenue_Load(object sender, EventArgs e)
         {
             populdateBill();
@@ -77,7 +70,7 @@ namespace CosmeticStore
         {
             conn.Close();
             conn.Open();
-            string query = "select * from Bill";
+            string query = "select BillID, SellerName, BillDate, toAMT from Bill";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
             var data = new DataSet();

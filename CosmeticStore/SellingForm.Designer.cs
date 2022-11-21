@@ -72,6 +72,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cusTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proDG)).BeginInit();
@@ -81,6 +83,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.cusTB);
             this.panel1.Controls.Add(this.cPass);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label9);
@@ -108,7 +112,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1260, 618);
+            this.panel1.Size = new System.Drawing.Size(1260, 688);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -253,7 +257,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(839, 333);
+            this.label6.Location = new System.Drawing.Point(817, 409);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 27);
             this.label6.TabIndex = 34;
@@ -266,7 +270,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button1.Location = new System.Drawing.Point(185, 281);
+            this.button1.Location = new System.Drawing.Point(186, 363);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 32);
             this.button1.TabIndex = 33;
@@ -306,7 +310,7 @@
             "OWNER",
             "MANAGER",
             "STAFF"});
-            this.typeCb.Location = new System.Drawing.Point(3, 330);
+            this.typeCb.Location = new System.Drawing.Point(3, 401);
             this.typeCb.Name = "typeCb";
             this.typeCb.Size = new System.Drawing.Size(268, 35);
             this.typeCb.TabIndex = 30;
@@ -320,7 +324,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button9.Location = new System.Drawing.Point(277, 330);
+            this.button9.Location = new System.Drawing.Point(277, 401);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(142, 35);
             this.button9.TabIndex = 29;
@@ -352,7 +356,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.proDG.DefaultCellStyle = dataGridViewCellStyle6;
             this.proDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
-            this.proDG.Location = new System.Drawing.Point(3, 372);
+            this.proDG.Location = new System.Drawing.Point(3, 442);
             this.proDG.Name = "proDG";
             this.proDG.RowHeadersVisible = false;
             this.proDG.RowHeadersWidth = 51;
@@ -407,7 +411,7 @@
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.billDG.DefaultCellStyle = dataGridViewCellStyle9;
             this.billDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
-            this.billDG.Location = new System.Drawing.Point(509, 372);
+            this.billDG.Location = new System.Drawing.Point(509, 451);
             this.billDG.Name = "billDG";
             this.billDG.RowHeadersVisible = false;
             this.billDG.RowHeadersWidth = 51;
@@ -445,7 +449,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button8.Location = new System.Drawing.Point(965, 568);
+            this.button8.Location = new System.Drawing.Point(943, 647);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(115, 38);
             this.button8.TabIndex = 25;
@@ -460,7 +464,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button7.Location = new System.Drawing.Point(844, 568);
+            this.button7.Location = new System.Drawing.Point(822, 647);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(115, 38);
             this.button7.TabIndex = 24;
@@ -475,7 +479,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button6.Location = new System.Drawing.Point(723, 568);
+            this.button6.Location = new System.Drawing.Point(701, 647);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(115, 38);
             this.button6.TabIndex = 6;
@@ -653,11 +657,43 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Azure;
+            this.label8.Location = new System.Drawing.Point(4, 279);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(110, 27);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "ADDRESS";
+            // 
+            // cusTB
+            // 
+            this.cusTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cusTB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cusTB.DefaultText = "";
+            this.cusTB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.cusTB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.cusTB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.cusTB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.cusTB.FillColor = System.Drawing.Color.Lavender;
+            this.cusTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cusTB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cusTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cusTB.Location = new System.Drawing.Point(151, 273);
+            this.cusTB.Name = "cusTB";
+            this.cusTB.PasswordChar = '\0';
+            this.cusTB.PlaceholderText = "";
+            this.cusTB.SelectedText = "";
+            this.cusTB.Size = new System.Drawing.Size(268, 33);
+            this.cusTB.TabIndex = 40;
+            // 
             // SellingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 665);
+            this.ClientSize = new System.Drawing.Size(1282, 735);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -710,5 +746,7 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label cPass;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2TextBox cusTB;
     }
 }
