@@ -56,7 +56,6 @@ namespace CosmeticStore
             cateGrid.DataSource = data.Tables[0];
             conn.Close();
         }
-
         private void CaterogyForm_Load(object sender, EventArgs e)
         {
             populate();
@@ -146,19 +145,25 @@ namespace CosmeticStore
             manager.Show();
             this.Hide();
         }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            DeliveryStaff delivery = new DeliveryStaff();
-            delivery.Show();
-            this.Hide();
-        }
-
         private void label6_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 form = new Form1();
             form.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Income income = new Income();
+            income.Show();
+            this.Hide();
         }
     }
 }

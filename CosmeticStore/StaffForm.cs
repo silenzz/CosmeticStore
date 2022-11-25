@@ -75,12 +75,24 @@ namespace CosmeticStore
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (Form1.staffName != "admin")
+            {
+                Revenue revenue = new Revenue();
+                revenue.Show();
+                this.Hide();
+            }
+            else Application.Exit();
         }
 
         private void StaffForm_Load(object sender, EventArgs e)
         {
             populate();
+            if(Form1.staffName != "admin")
+            {
+                this.button2.Enabled = false;
+                this.button4.Enabled = false;
+                this.button10.Enabled = false;
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -179,19 +191,25 @@ namespace CosmeticStore
             form.Show();
             this.Hide();
         }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            DeliveryStaff delivery = new DeliveryStaff();
-            delivery.Show();
-            this.Hide();
-        }
-
         private void label11_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 form = new Form1();
             form.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Income income = new Income();
+            income.Show();
+            this.Hide();
         }
     }
 }

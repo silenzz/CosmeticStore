@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.typeCb2 = new System.Windows.Forms.ComboBox();
             this.proGrid = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -62,8 +63,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proGrid)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +103,18 @@
             this.panel1.Size = new System.Drawing.Size(1367, 618);
             this.panel1.TabIndex = 0;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(6, 575);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 27);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "LOG OUT";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Azure;
@@ -137,26 +150,26 @@
             // proGrid
             // 
             this.proGrid.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.proGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.proGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.proGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.proGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.proGrid.ColumnHeadersHeight = 30;
             this.proGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.proGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.proGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.proGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.proGrid.Location = new System.Drawing.Point(511, 124);
             this.proGrid.Name = "proGrid";
@@ -613,38 +626,41 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button10
+            // button11
             // 
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.button10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button10.Location = new System.Drawing.Point(12, 311);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(124, 38);
-            this.button10.TabIndex = 42;
-            this.button10.Text = "Delivery";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button11.ForeColor = System.Drawing.Color.SteelBlue;
+            this.button11.Location = new System.Drawing.Point(12, 309);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(124, 38);
+            this.button11.TabIndex = 49;
+            this.button11.Text = "Report";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // label11
+            // button12
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(6, 575);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 27);
-            this.label11.TabIndex = 43;
-            this.label11.Text = "LOG OUT";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button12.ForeColor = System.Drawing.Color.SteelBlue;
+            this.button12.Location = new System.Drawing.Point(21, 353);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(106, 58);
+            this.button12.TabIndex = 59;
+            this.button12.Text = "View income";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1537, 655);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -696,7 +712,8 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ComboBox typeCb;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
     }
 }

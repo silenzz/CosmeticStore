@@ -64,7 +64,7 @@ namespace CosmeticStore
                 conn.Open();
                 string query = "insert into Manager values(" + mID.Text + ",'" + maID.Text + "','"
                     + maName.Text + "','" + maLogTb.Text + "','" + maPasswordTb.Text + "','"
-                    + maEmailTb.Text + "','" + maAddTb.Text + "'," + maPhoneTb.Text + "," + maSex.Text + ",'Blank')";
+                    + maEmailTb.Text + "','" + maAddTb.Text + "'," + maPhoneTb.Text + "," + maSex.Text + ")";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Manager added");
@@ -175,19 +175,25 @@ namespace CosmeticStore
         {
             populate();
         }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            DeliveryStaff delivery = new DeliveryStaff();
-            delivery.Show();
-            this.Hide();
-        }
-
         private void label12_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 form = new Form1();
             form.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Income income = new Income();
+            income.Show();
+            this.Hide();
         }
     }
 }

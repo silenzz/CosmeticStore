@@ -42,11 +42,23 @@ namespace CosmeticStore
         {
             populate();
             fillComboBox();
+            if(Form1.staffName != "admin")
+            {
+                this.button2.Enabled = false;
+                this.button4.Enabled = false;
+                this.button11.Enabled = false;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (Form1.staffName != "admin")
+            {
+                Revenue revenue = new Revenue();
+                revenue.Show();
+                this.Hide();
+            }
+            else Application.Exit();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -193,13 +205,6 @@ namespace CosmeticStore
             manager.Show();
             this.Hide();
         }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            DeliveryStaff delivery = new DeliveryStaff();
-            delivery.Show();
-            this.Hide();
-        }
         private void typeCb2_SelectionChangeCommitted(object sender, EventArgs e)
         {
             conn.Open();
@@ -221,6 +226,20 @@ namespace CosmeticStore
             this.Hide();
             Form1 form = new Form1();
             form.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Income income = new Income();
+            income.Show();
+            this.Hide();
         }
     }
 }

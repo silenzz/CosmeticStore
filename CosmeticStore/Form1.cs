@@ -35,6 +35,7 @@ namespace CosmeticStore
                         {
                             if (ownerAuthenication())
                             {
+                                staffName = uNameTb.Text;
                                 ProductForm product = new ProductForm();
                                 product.Show();
                                 this.Hide();
@@ -45,8 +46,12 @@ namespace CosmeticStore
                         {
                             if(managerAuthenication())
                             {
-                                MessageBox.Show("Enter manager section");
+                                staffName = uNameTb.Text;
+                                Revenue revenue = new Revenue();
+                                revenue.Show();
+                                this.Hide();
                             }
+                            else MessageBox.Show("Wrong username or password");
                         }
                         else if(roleCb.SelectedIndex == 2)
                         {
@@ -58,13 +63,6 @@ namespace CosmeticStore
                                 this.Hide();
                             }
                             else MessageBox.Show("Wrong username or password");
-                        }
-                        else if(roleCb.SelectedIndex == 3)
-                        {
-                            if(DeliveryAuthenication())
-                            {
-                                MessageBox.Show("Enter delivery section");
-                            }
                         }
                     }
                 }
@@ -123,24 +121,6 @@ namespace CosmeticStore
             Boolean result = false;
             conn.Open();
             String qr = String.Format("Select count(*) from Staff where StaffLoginID = '" + uNameTb.Text + "' and StaffPassword = '" + passTb.Text + "'");
-            SqlCommand cmd = new SqlCommand(qr, conn);
-            SqlDataReader reader;
-            reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                if (reader[0].ToString() == "1")
-                {
-                    result = true;
-                }
-            }
-            conn.Close();
-            return result;
-        }
-        public Boolean DeliveryAuthenication()
-        {
-            Boolean result = false;
-            conn.Open();
-            String qr = String.Format("Select count(*) from DelStaff where DelLoginID = '" + uNameTb.Text + "' and DelPassword = '" + passTb.Text + "'");
             SqlCommand cmd = new SqlCommand(qr, conn);
             SqlDataReader reader;
             reader = cmd.ExecuteReader();
