@@ -17,6 +17,7 @@ namespace CosmeticStore
         public Revenue()
         {
             InitializeComponent();
+            getIncomeDate();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -51,16 +52,23 @@ namespace CosmeticStore
         {
             try
             {
-                conn.Open();
-                string query = "insert into Income values(" + inID.Text + "," + inAmt.Text + ",'" + inSeller.Text + "','" + inDate.Value.Date + "','" +  inNote.Text + "','" + Form1.staffName +  "')";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Income added");
-                conn.Close();
-                inID.Text = "";
-                inAmt.Text = "";
-                inSeller.Text = "";
-                inNote.Text = "";
+                if(inID.Text == "" || inAmt.Text == "" || inSeller.Text == "" || inDate.Text == "" || inNote.Text == "" || Form1.staffName == "")
+                {
+                    MessageBox.Show("Fill up information");
+                }
+                else
+                {
+                    conn.Open();
+                    string query = "insert into Income values(" + inID.Text + "," + inAmt.Text + ",'" + inSeller.Text + "','" + inDate.Value.Date + "','" + inNote.Text + "','" + Form1.staffName + "')";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Income added");
+                    conn.Close();
+                    inID.Text = "";
+                    inAmt.Text = "";
+                    inSeller.Text = "";
+                    inNote.Text = "";
+                }
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -84,6 +92,46 @@ namespace CosmeticStore
             Income income = new Income();
             income.Show();
             this.Hide();
+        }
+        private void getIncomeDate()
+        {
+            conn.Open();
+            string query = "select max(InDate) from Income";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            last.Text = dt.Rows[0][0].ToString();
+            conn.Close();
+        }
+
+        private void InUpTb_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (inID.Text == "" || inAmt.Text == "" || inSeller.Text == "" || inDate.Text == "" || inNote.Text == "" || Form1.staffName == "")
+                {
+                    MessageBox.Show("Fill up information");
+                }
+                else
+                {
+                    conn.Open();
+                    string query = "update Income set InID = " + inID.Text + ", InAmount = " + inAmt.Text
+                        + ", InSeller = '" + inSeller.Text + "', InDate = '" + inDate.Text + "', InNote = '" + inNote.Text
+                        + "', InUser = '" + Form1.staffName + "'";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Income updated");
+                    conn.Close();
+                    inID.Text = "";
+                    inAmt.Text = "";
+                    inSeller.Text = "";
+                    inDate.Text = "";
+                    inNote.Text = "";
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

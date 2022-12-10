@@ -94,7 +94,7 @@
             this.passTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passTb.Location = new System.Drawing.Point(560, 286);
             this.passTb.Name = "passTb";
-            this.passTb.PasswordChar = '\0';
+            this.passTb.PasswordChar = '*';
             this.passTb.PlaceholderText = "";
             this.passTb.SelectedText = "";
             this.passTb.Size = new System.Drawing.Size(268, 36);

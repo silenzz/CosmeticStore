@@ -45,7 +45,7 @@
             this.inID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.last = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.InUpTb = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.billDG)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.InUpTb);
             this.panel1.Controls.Add(this.inSeller);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.billDG);
@@ -315,32 +317,32 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.last);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(912, 141);
+            this.panel2.Location = new System.Drawing.Point(859, 141);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 123);
+            this.panel2.Size = new System.Drawing.Size(293, 123);
             this.panel2.TabIndex = 50;
             // 
-            // label3
+            // last
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 71);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Last income";
+            this.last.AutoSize = true;
+            this.last.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.last.Location = new System.Drawing.Point(3, 71);
+            this.last.Name = "last";
+            this.last.Size = new System.Drawing.Size(128, 23);
+            this.last.TabIndex = 1;
+            this.last.Text = "Last income";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 17);
+            this.label2.Location = new System.Drawing.Point(16, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 27);
+            this.label2.Size = new System.Drawing.Size(208, 27);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Total income";
+            this.label2.Text = "Last day revenue";
             // 
             // label6
             // 
@@ -421,6 +423,21 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // InUpTb
+            // 
+            this.InUpTb.BackColor = System.Drawing.Color.Azure;
+            this.InUpTb.FlatAppearance.BorderSize = 0;
+            this.InUpTb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InUpTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InUpTb.ForeColor = System.Drawing.Color.SteelBlue;
+            this.InUpTb.Location = new System.Drawing.Point(615, 532);
+            this.InUpTb.Name = "InUpTb";
+            this.InUpTb.Size = new System.Drawing.Size(182, 38);
+            this.InUpTb.TabIndex = 64;
+            this.InUpTb.Text = "UPDATE INCOME";
+            this.InUpTb.UseVisualStyleBackColor = false;
+            this.InUpTb.Click += new System.EventHandler(this.InUpTb_Click);
+            // 
             // Revenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -454,7 +471,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label last;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox inNote;
         private System.Windows.Forms.Label label7;
@@ -469,5 +486,6 @@
         private System.Windows.Forms.Button button6;
         private Guna.UI2.WinForms.Guna2TextBox inSeller;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button InUpTb;
     }
 }

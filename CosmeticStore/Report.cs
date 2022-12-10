@@ -23,6 +23,7 @@ namespace CosmeticStore
             getMaxIncome();
             getMinIncome();
             getBestSeller();
+            getBestProduct();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -114,7 +115,7 @@ namespace CosmeticStore
         private void getMinIncome()
         {
             conn.Open();
-            string query = "select max(InAmount) from Income";
+            string query = "select min(InAmount) from Income";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -124,11 +125,21 @@ namespace CosmeticStore
         private void getBestSeller()
         {
             conn.Open();
-            string query = "select InSeller, sum(InAmount) as sumSold from Income group by InSeller order by sum(InAmount)";
+            string query = "select InSeller, sum(InAmount) as sumSold from Income group by InSeller order by sum(InAmount) DESC";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             seller.Text = dt.Rows[0][0].ToString();
+            conn.Close();
+        }
+        private void getBestProduct()
+        {
+            conn.Open();
+            string query = "select CosName, MIN(CosQuantity) from Product group by CosName";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            pro.Text = dt.Rows[0][0].ToString();
             conn.Close();
         }
     }

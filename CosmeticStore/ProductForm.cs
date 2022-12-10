@@ -72,23 +72,32 @@ namespace CosmeticStore
         {
             try
             {
-                conn.Open();
-                string query = "insert into Product values(" + pIDTb.Text + ",'" + skuTB.Text + "','" + proNameTb.Text + "','" + proComTb.Text + "',"+proPriceTb.Text+",'"+proDateTb.Text+"',"+proQuanTb.Text+",'"+typeCb.SelectedValue.ToString()+"','"+proUnitTb.Text+"')";
+                if(pIDTb.Text == "" || skuTB.Text == "" || proNameTb.Text == "" || proComTb.Text == ""
+                    || proPriceTb.Text == "" || proDateTb.Text == "" || proQuanTb.Text == ""
+                    || typeCb.SelectedValue.ToString() == "" || proUnitTb.Text == "")
+                {
+                    MessageBox.Show("Fill up information");
+                }
+                else
+                {
+                    conn.Open();
+                    string query = "insert into Product values(" + pIDTb.Text + ",'" + skuTB.Text + "','" + proNameTb.Text + "','" + proComTb.Text + "'," + proPriceTb.Text + ",'" + proDateTb.Text + "'," + proQuanTb.Text + ",'" + typeCb.SelectedValue.ToString() + "','" + proUnitTb.Text + "')";
 
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Product added");
-                conn.Close();
-                populate();
-                pIDTb.Text = "";
-                skuTB.Text = "";
-                proNameTb.Text = "";
-                proComTb.Text = "";
-                proPriceTb.Text = "";
-                proDateTb.Text = "";
-                proQuanTb.Text = "";
-                typeCb.SelectedIndex = -1;
-                proUnitTb.Text = "";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product added");
+                    conn.Close();
+                    populate();
+                    pIDTb.Text = "";
+                    skuTB.Text = "";
+                    proNameTb.Text = "";
+                    proComTb.Text = "";
+                    proPriceTb.Text = "";
+                    proDateTb.Text = "";
+                    proQuanTb.Text = "";
+                    typeCb.SelectedIndex = -1;
+                    proUnitTb.Text = "";
+                }
             }
             catch (Exception ex)
             {
@@ -208,13 +217,14 @@ namespace CosmeticStore
         private void typeCb2_SelectionChangeCommitted(object sender, EventArgs e)
         {
             conn.Open();
-            string query = "select * from Product where CosType = '" + typeCb.SelectedValue.ToString() + "'";
+            string query = "select * from Product where CosType = '" + typeCb2.SelectedValue.ToString() + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
             var ds = new DataSet();
             adapter.Fill(ds);
             proGrid.DataSource = ds.Tables[0];
             conn.Close();
+            
         }
         private void button9_Click(object sender, EventArgs e)
         {

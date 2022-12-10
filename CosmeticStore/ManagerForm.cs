@@ -61,24 +61,31 @@ namespace CosmeticStore
         {
             try
             {
-                conn.Open();
-                string query = "insert into Manager values(" + mID.Text + ",'" + maID.Text + "','"
-                    + maName.Text + "','" + maLogTb.Text + "','" + maPasswordTb.Text + "','"
-                    + maEmailTb.Text + "','" + maAddTb.Text + "'," + maPhoneTb.Text + "," + maSex.Text + ")";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Manager added");
-                conn.Close();
-                populate();
-                mID.Text = "";
-                maID.Text = "";
-                maName.Text = "";
-                maLogTb.Text = "";
-                maPasswordTb.Text = "";
-                maEmailTb.Text = "";
-                maAddTb.Text = "";
-                maPhoneTb.Text = "";
-                maSex.Text = "";
+                if(mID.Text == "" || maID.Text == "" || maName.Text == "" || maLogTb.Text == "" || maPasswordTb.Text == "" || maEmailTb.Text == "" || maAddTb.Text == "" || maPhoneTb.Text == "" || maSex.Text == "")
+                {
+                    MessageBox.Show("Fill up information");
+                }
+                else
+                {
+                    conn.Open();
+                    string query = "insert into Manager values(" + mID.Text + ",'" + maID.Text + "','"
+                        + maName.Text + "','" + maLogTb.Text + "','" + maPasswordTb.Text + "','"
+                        + maEmailTb.Text + "','" + maAddTb.Text + "'," + maPhoneTb.Text + "," + maSex.Text + ")";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Manager added");
+                    conn.Close();
+                    populate();
+                    mID.Text = "";
+                    maID.Text = "";
+                    maName.Text = "";
+                    maLogTb.Text = "";
+                    maPasswordTb.Text = "";
+                    maEmailTb.Text = "";
+                    maAddTb.Text = "";
+                    maPhoneTb.Text = "";
+                    maSex.Text = "";
+                }
             }
             catch (Exception ex)
             {

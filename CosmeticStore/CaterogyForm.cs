@@ -25,16 +25,23 @@ namespace CosmeticStore
             try
             {
                 conn.Open();
-                string query = "insert into Caterogy values("+cIDTb.Text+",'"+cateIDTb.Text+"','"+cateNameTb.Text+"','"+cateDesTb.Text+"')";
-                SqlCommand cmd = new SqlCommand(query,conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Caterogy added");
-                conn.Close();
-                populate();
-                cIDTb.Text = "";
-                cateIDTb.Text = "";
-                cateNameTb.Text = "";
-                cateDesTb.Text = "";
+                if(cIDTb.Text == "" || cateIDTb.Text == "" || cateNameTb.Text == "" || cateDesTb.Text == "")
+                {
+                    MessageBox.Show("Fill up information");
+                }
+                else
+                {
+                    string query = "insert into Caterogy values(" + cIDTb.Text + ",'" + cateIDTb.Text + "','" + cateNameTb.Text + "','" + cateDesTb.Text + "')";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Caterogy added");
+                    conn.Close();
+                    populate();
+                    cIDTb.Text = "";
+                    cateIDTb.Text = "";
+                    cateNameTb.Text = "";
+                    cateDesTb.Text = "";
+                }
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);

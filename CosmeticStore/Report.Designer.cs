@@ -57,17 +57,22 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pro = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
@@ -96,7 +101,7 @@
             this.panel5.BackColor = System.Drawing.Color.Bisque;
             this.panel5.Controls.Add(this.seller);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(853, 331);
+            this.panel5.Location = new System.Drawing.Point(853, 216);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(249, 99);
             this.panel5.TabIndex = 52;
@@ -392,6 +397,36 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Bisque;
+            this.panel8.Controls.Add(this.pro);
+            this.panel8.Controls.Add(this.label8);
+            this.panel8.Location = new System.Drawing.Point(853, 331);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(249, 99);
+            this.panel8.TabIndex = 64;
+            // 
+            // pro
+            // 
+            this.pro.AutoSize = true;
+            this.pro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pro.Location = new System.Drawing.Point(68, 60);
+            this.pro.Name = "pro";
+            this.pro.Size = new System.Drawing.Size(85, 23);
+            this.pro.TabIndex = 63;
+            this.pro.Text = "amount";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(55, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 27);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "Best product";
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -421,6 +456,8 @@
             this.panel3.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -456,5 +493,8 @@
         private System.Windows.Forms.Label totalIn;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label pro;
+        private System.Windows.Forms.Label label8;
     }
 }

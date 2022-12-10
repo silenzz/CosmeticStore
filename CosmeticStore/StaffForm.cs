@@ -49,24 +49,33 @@ namespace CosmeticStore
         {
             try
             {
-                conn.Open();
-                string query = "insert into Staff values("+ sIDTb.Text + ",'" + staffIDTb.Text + "','"
-                    + staffNameTb.Text + "','" + staffLogTb.Text + "','" + staffPasswordTb.Text + "','"
-                    + staffEmailTb.Text + "','" + staffAddTb.Text + "'," + staffPhoneTb.Text + "," + staffSex.Text + ")";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Staff added");
-                conn.Close();
-                populate();
-                sIDTb.Text = "";
-                staffIDTb.Text = "";
-                staffNameTb.Text = "";
-                staffLogTb.Text = "";
-                staffPasswordTb.Text = "";
-                staffEmailTb.Text = "";
-                staffAddTb.Text = "";
-                staffPhoneTb.Text = "";
-                staffSex.Text = "";
+                if (sIDTb.Text == "" || staffIDTb.Text == "" || staffNameTb.Text == "" || staffLogTb.Text == ""
+                    || staffPasswordTb.Text == "" || staffEmailTb.Text == "" || staffAddTb.Text == ""
+                    || staffPhoneTb.Text == "" || staffSex.Text == "")
+                {
+                    MessageBox.Show("Please fill in the primary information");
+                }
+                else
+                {
+                    conn.Open();
+                    string query = "insert into Staff values(" + sIDTb.Text + ",'" + staffIDTb.Text + "','"
+                        + staffNameTb.Text + "','" + staffLogTb.Text + "','" + staffPasswordTb.Text + "','"
+                        + staffEmailTb.Text + "','" + staffAddTb.Text + "'," + staffPhoneTb.Text + "," + staffSex.Text + ")";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Staff added");
+                    conn.Close();
+                    populate();
+                    sIDTb.Text = "";
+                    staffIDTb.Text = "";
+                    staffNameTb.Text = "";
+                    staffLogTb.Text = "";
+                    staffPasswordTb.Text = "";
+                    staffEmailTb.Text = "";
+                    staffAddTb.Text = "";
+                    staffPhoneTb.Text = "";
+                    staffSex.Text = "";
+                }
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);

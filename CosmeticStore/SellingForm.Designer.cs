@@ -39,6 +39,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellingForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cusTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.cPass = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -72,8 +76,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cusTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proDG)).BeginInit();
@@ -83,6 +85,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.cusTB);
             this.panel1.Controls.Add(this.cPass);
@@ -115,6 +119,68 @@
             this.panel1.Size = new System.Drawing.Size(1260, 688);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Azure;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.button3.Location = new System.Drawing.Point(509, 271);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 35);
+            this.button3.TabIndex = 43;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Azure;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.button2.Location = new System.Drawing.Point(1007, 647);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(188, 38);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "STOCK UPDATE";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Azure;
+            this.label8.Location = new System.Drawing.Point(4, 279);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(110, 27);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "ADDRESS";
+            // 
+            // cusTB
+            // 
+            this.cusTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cusTB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cusTB.DefaultText = "";
+            this.cusTB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.cusTB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.cusTB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.cusTB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.cusTB.FillColor = System.Drawing.Color.Lavender;
+            this.cusTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cusTB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cusTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cusTB.Location = new System.Drawing.Point(151, 273);
+            this.cusTB.Name = "cusTB";
+            this.cusTB.PasswordChar = '\0';
+            this.cusTB.PlaceholderText = "";
+            this.cusTB.SelectedText = "";
+            this.cusTB.Size = new System.Drawing.Size(268, 33);
+            this.cusTB.TabIndex = 40;
             // 
             // cPass
             // 
@@ -449,7 +515,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button8.Location = new System.Drawing.Point(943, 647);
+            this.button8.Location = new System.Drawing.Point(886, 647);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(115, 38);
             this.button8.TabIndex = 25;
@@ -464,7 +530,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button7.Location = new System.Drawing.Point(822, 647);
+            this.button7.Location = new System.Drawing.Point(765, 647);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(115, 38);
             this.button7.TabIndex = 24;
@@ -479,7 +545,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button6.Location = new System.Drawing.Point(701, 647);
+            this.button6.Location = new System.Drawing.Point(644, 647);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(115, 38);
             this.button6.TabIndex = 6;
@@ -657,38 +723,6 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Azure;
-            this.label8.Location = new System.Drawing.Point(4, 279);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 27);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "ADDRESS";
-            // 
-            // cusTB
-            // 
-            this.cusTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cusTB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cusTB.DefaultText = "";
-            this.cusTB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.cusTB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.cusTB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.cusTB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.cusTB.FillColor = System.Drawing.Color.Lavender;
-            this.cusTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cusTB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cusTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cusTB.Location = new System.Drawing.Point(151, 273);
-            this.cusTB.Name = "cusTB";
-            this.cusTB.PasswordChar = '\0';
-            this.cusTB.PlaceholderText = "";
-            this.cusTB.SelectedText = "";
-            this.cusTB.Size = new System.Drawing.Size(268, 33);
-            this.cusTB.TabIndex = 40;
-            // 
             // SellingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -748,5 +782,7 @@
         private System.Windows.Forms.Label cPass;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox cusTB;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

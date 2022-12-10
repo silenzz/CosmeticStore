@@ -71,7 +71,11 @@ namespace CosmeticStore
                 row.Cells[0].Value = n + 1;
                 row.Cells[1].Value = sellName.Text;
                 row.Cells[2].Value = sellPrice.Text;
-                row.Cells[3].Value = sellQuan.Text;
+                if (Convert.ToInt32(sellQuan.Text) > 0)
+                {
+                    row.Cells[3].Value = sellQuan.Text;
+                }
+                else MessageBox.Show("Invalid quantity");
                 row.Cells[4].Value = Convert.ToInt32(sellPrice.Text) * Convert.ToInt32(sellQuan.Text);
                 orderDG.Rows.Add(row);
                 n++;
@@ -128,6 +132,27 @@ namespace CosmeticStore
                 printDocument1.Print();
             }
         }
+        int sold_quantity;
+        private void calculateQuantity()
+        {
+            try
+            {
+                conn.Open();
+                foreach (DataGridViewRow row in orderDG.Rows)
+                {
+                    sName = "" + row.Cells[1].Value;
+                    sold_quantity = Convert.ToInt32(row.Cells[3].Value);
+                    string query = "update Product set CosQuantity = CosQuantity - " + sold_quantity + "where CosName = '" + sName + "'";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void billDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -165,8 +190,6 @@ namespace CosmeticStore
             e.Graphics.DrawString("Date: " + billDG.SelectedRows[0].Cells[3].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Regular), Brushes.SteelBlue, new Point(100, 340));
             e.Graphics.DrawString("*********CosmeticQueen*********", new Font("Century Gothic", 25, FontStyle.Italic), Brushes.SteelBlue, new Point(150, 370));
             e.Graphics.DrawString("Thanks for using our services", new Font("Century Gothic", 25, FontStyle.Italic), Brushes.SteelBlue, new Point(200, 400));
-            orderDG.Rows.Clear();
-            orderDG.Refresh();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -201,6 +224,17 @@ namespace CosmeticStore
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            calculateQuantity();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            orderDG.Rows.Clear();
+            orderDG.Refresh();
         }
 
         private void typeCb_SelectionChangeCommitted(object sender, EventArgs e)
