@@ -27,6 +27,7 @@ namespace CosmeticStore
                 this.button4.Enabled = false;
                 this.button5.Enabled = false;
             }
+            else delInc.Enabled = false;
             populate();
         }
         private void label11_Click(object sender, EventArgs e)
@@ -89,6 +90,22 @@ namespace CosmeticStore
                 this.Hide();
             }
             else Application.Exit();
+        }
+
+        private void delInc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string query = "delete from Income where InID = " + incomeGrid.SelectedRows[0].Cells[0].Value + "";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                populate();
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

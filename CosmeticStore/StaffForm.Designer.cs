@@ -159,6 +159,7 @@
             this.staffGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.staffGrid.Location = new System.Drawing.Point(455, 91);
             this.staffGrid.Name = "staffGrid";
+            this.staffGrid.ReadOnly = true;
             this.staffGrid.RowHeadersVisible = false;
             this.staffGrid.RowHeadersWidth = 51;
             this.staffGrid.RowTemplate.Height = 30;
@@ -178,7 +179,7 @@
             this.staffGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.staffGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.staffGrid.ThemeStyle.HeaderStyle.Height = 30;
-            this.staffGrid.ThemeStyle.ReadOnly = false;
+            this.staffGrid.ThemeStyle.ReadOnly = true;
             this.staffGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.staffGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.staffGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

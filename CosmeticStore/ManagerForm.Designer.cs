@@ -158,6 +158,7 @@
             this.managerGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.managerGrid.Location = new System.Drawing.Point(473, 91);
             this.managerGrid.Name = "managerGrid";
+            this.managerGrid.ReadOnly = true;
             this.managerGrid.RowHeadersVisible = false;
             this.managerGrid.RowHeadersWidth = 51;
             this.managerGrid.RowTemplate.Height = 30;
@@ -177,7 +178,7 @@
             this.managerGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.managerGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.managerGrid.ThemeStyle.HeaderStyle.Height = 30;
-            this.managerGrid.ThemeStyle.ReadOnly = false;
+            this.managerGrid.ThemeStyle.ReadOnly = true;
             this.managerGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.managerGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.managerGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

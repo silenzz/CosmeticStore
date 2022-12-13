@@ -173,6 +173,7 @@
             this.proGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.proGrid.Location = new System.Drawing.Point(511, 124);
             this.proGrid.Name = "proGrid";
+            this.proGrid.ReadOnly = true;
             this.proGrid.RowHeadersVisible = false;
             this.proGrid.RowHeadersWidth = 51;
             this.proGrid.RowTemplate.Height = 30;
@@ -192,7 +193,7 @@
             this.proGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.proGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.proGrid.ThemeStyle.HeaderStyle.Height = 30;
-            this.proGrid.ThemeStyle.ReadOnly = false;
+            this.proGrid.ThemeStyle.ReadOnly = true;
             this.proGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.proGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.proGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

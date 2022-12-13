@@ -42,6 +42,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.delInc = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.incomeGrid)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.delInc);
             this.panel1.Controls.Add(this.incomeGrid);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label11);
@@ -83,6 +85,7 @@
             this.incomeGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.incomeGrid.Location = new System.Drawing.Point(26, 119);
             this.incomeGrid.Name = "incomeGrid";
+            this.incomeGrid.ReadOnly = true;
             this.incomeGrid.RowHeadersVisible = false;
             this.incomeGrid.RowHeadersWidth = 51;
             this.incomeGrid.RowTemplate.Height = 30;
@@ -102,7 +105,7 @@
             this.incomeGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.incomeGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.incomeGrid.ThemeStyle.HeaderStyle.Height = 30;
-            this.incomeGrid.ThemeStyle.ReadOnly = false;
+            this.incomeGrid.ThemeStyle.ReadOnly = true;
             this.incomeGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.incomeGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.incomeGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -231,6 +234,21 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // delInc
+            // 
+            this.delInc.BackColor = System.Drawing.Color.Azure;
+            this.delInc.FlatAppearance.BorderSize = 0;
+            this.delInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delInc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delInc.ForeColor = System.Drawing.Color.SteelBlue;
+            this.delInc.Location = new System.Drawing.Point(988, 558);
+            this.delInc.Name = "delInc";
+            this.delInc.Size = new System.Drawing.Size(115, 38);
+            this.delInc.TabIndex = 56;
+            this.delInc.Text = "DELETE";
+            this.delInc.UseVisualStyleBackColor = false;
+            this.delInc.Click += new System.EventHandler(this.delInc_Click);
+            // 
             // Income
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,5 +287,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button8;
         private Guna.UI2.WinForms.Guna2DataGridView incomeGrid;
+        private System.Windows.Forms.Button delInc;
     }
 }

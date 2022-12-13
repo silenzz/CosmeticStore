@@ -40,6 +40,9 @@ namespace CosmeticStore
                         recentTb.Text = "";
                         newTb.Text = "";
                         confirmTb.Text = "";
+                        Form1 form = new Form1();
+                        form.Show();
+                        this.Hide();
                     }
                 }
                 else MessageBox.Show("Please fill up the information");

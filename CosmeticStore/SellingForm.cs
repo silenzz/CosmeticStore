@@ -84,6 +84,18 @@ namespace CosmeticStore
                     view_total += Convert.ToInt32(orderDG.Rows[i].Cells[4].Value);
                 }
                 amount.Text = view_total.ToString();
+
+                try
+                {
+                    conn.Open();
+                    string query = "insert into Sold values('" + sellName.Text + "'," + sellQuan.Text + ")";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                } catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 

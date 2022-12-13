@@ -135,7 +135,7 @@ namespace CosmeticStore
         private void getBestProduct()
         {
             conn.Open();
-            string query = "select CosName, MIN(CosQuantity) from Product group by CosName";
+            string query = "select Name, sum(Quantity) as sold from Sold group by Name order by sum(Quantity) DESC";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);

@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.InUpTb = new System.Windows.Forms.Button();
             this.inSeller = new Guna.UI2.WinForms.Guna2TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.billDG = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -53,7 +54,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.InUpTb = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.billDG)).BeginInit();
             this.panel2.SuspendLayout();
@@ -82,6 +82,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 643);
             this.panel1.TabIndex = 0;
+            // 
+            // InUpTb
+            // 
+            this.InUpTb.BackColor = System.Drawing.Color.Azure;
+            this.InUpTb.FlatAppearance.BorderSize = 0;
+            this.InUpTb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InUpTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InUpTb.ForeColor = System.Drawing.Color.SteelBlue;
+            this.InUpTb.Location = new System.Drawing.Point(615, 532);
+            this.InUpTb.Name = "InUpTb";
+            this.InUpTb.Size = new System.Drawing.Size(182, 38);
+            this.InUpTb.TabIndex = 64;
+            this.InUpTb.Text = "UPDATE INCOME";
+            this.InUpTb.UseVisualStyleBackColor = false;
+            this.InUpTb.Click += new System.EventHandler(this.InUpTb_Click);
             // 
             // inSeller
             // 
@@ -147,6 +162,7 @@
             this.billDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.billDG.Location = new System.Drawing.Point(417, 346);
             this.billDG.Name = "billDG";
+            this.billDG.ReadOnly = true;
             this.billDG.RowHeadersVisible = false;
             this.billDG.RowHeadersWidth = 51;
             this.billDG.RowTemplate.Height = 30;
@@ -166,7 +182,7 @@
             this.billDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.billDG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.billDG.ThemeStyle.HeaderStyle.Height = 30;
-            this.billDG.ThemeStyle.ReadOnly = false;
+            this.billDG.ThemeStyle.ReadOnly = true;
             this.billDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.billDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.billDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -422,21 +438,6 @@
             this.button11.Text = "View income";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // InUpTb
-            // 
-            this.InUpTb.BackColor = System.Drawing.Color.Azure;
-            this.InUpTb.FlatAppearance.BorderSize = 0;
-            this.InUpTb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.InUpTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InUpTb.ForeColor = System.Drawing.Color.SteelBlue;
-            this.InUpTb.Location = new System.Drawing.Point(615, 532);
-            this.InUpTb.Name = "InUpTb";
-            this.InUpTb.Size = new System.Drawing.Size(182, 38);
-            this.InUpTb.TabIndex = 64;
-            this.InUpTb.Text = "UPDATE INCOME";
-            this.InUpTb.UseVisualStyleBackColor = false;
-            this.InUpTb.Click += new System.EventHandler(this.InUpTb_Click);
             // 
             // Revenue
             // 

@@ -260,6 +260,7 @@
             this.orderDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.orderDG.Location = new System.Drawing.Point(509, 88);
             this.orderDG.Name = "orderDG";
+            this.orderDG.ReadOnly = true;
             this.orderDG.RowHeadersVisible = false;
             this.orderDG.RowHeadersWidth = 51;
             this.orderDG.RowTemplate.Height = 30;
@@ -279,7 +280,7 @@
             this.orderDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.orderDG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.orderDG.ThemeStyle.HeaderStyle.Height = 30;
-            this.orderDG.ThemeStyle.ReadOnly = false;
+            this.orderDG.ThemeStyle.ReadOnly = true;
             this.orderDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.orderDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.orderDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -293,30 +294,35 @@
             this.id.HeaderText = "ID";
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // name
             // 
             this.name.HeaderText = "ProName";
             this.name.MinimumWidth = 6;
             this.name.Name = "name";
+            this.name.ReadOnly = true;
             // 
             // price
             // 
             this.price.HeaderText = "Price";
             this.price.MinimumWidth = 6;
             this.price.Name = "price";
+            this.price.ReadOnly = true;
             // 
             // quan
             // 
             this.quan.HeaderText = "Quantity";
             this.quan.MinimumWidth = 6;
             this.quan.Name = "quan";
+            this.quan.ReadOnly = true;
             // 
             // total
             // 
             this.total.HeaderText = "Total";
             this.total.MinimumWidth = 6;
             this.total.Name = "total";
+            this.total.ReadOnly = true;
             // 
             // label6
             // 
@@ -424,6 +430,7 @@
             this.proDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.proDG.Location = new System.Drawing.Point(3, 442);
             this.proDG.Name = "proDG";
+            this.proDG.ReadOnly = true;
             this.proDG.RowHeadersVisible = false;
             this.proDG.RowHeadersWidth = 51;
             this.proDG.RowTemplate.Height = 30;
@@ -443,7 +450,7 @@
             this.proDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.proDG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.proDG.ThemeStyle.HeaderStyle.Height = 30;
-            this.proDG.ThemeStyle.ReadOnly = false;
+            this.proDG.ThemeStyle.ReadOnly = true;
             this.proDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.proDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.proDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -479,6 +486,7 @@
             this.billDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.billDG.Location = new System.Drawing.Point(509, 451);
             this.billDG.Name = "billDG";
+            this.billDG.ReadOnly = true;
             this.billDG.RowHeadersVisible = false;
             this.billDG.RowHeadersWidth = 51;
             this.billDG.RowTemplate.Height = 30;
@@ -498,7 +506,7 @@
             this.billDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.billDG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.billDG.ThemeStyle.HeaderStyle.Height = 30;
-            this.billDG.ThemeStyle.ReadOnly = false;
+            this.billDG.ThemeStyle.ReadOnly = true;
             this.billDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.billDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.billDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
